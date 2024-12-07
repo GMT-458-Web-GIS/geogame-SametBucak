@@ -8,7 +8,7 @@
 
 - ![image](https://github.com/user-attachments/assets/f3798c0f-cc5e-464a-83a1-4beb7f3026fb)
 
-- **You can play the game from this link. Enjoy it!:** https://github.com/GMT-458-Web-GIS/geogame-SametBucak.git
+- **You can play the game from this link. Enjoy it!:**
 
 ## Features
 
