@@ -1,6 +1,6 @@
 # Where Is The Stadium ?
 
-**Where Is The Stadium** is a fun geographic game that aims to find stadium names, visuals and the correct location on the map. Players can play in two different modes:
+**Where Is The Stadium ?** is a fun geographic game that aims to find stadium names, visuals and the correct location on the map. Players can play in two different modes:
 
 - **Turkish Super League Mode**: Played for stadiums in the Turkish Super League.
 
