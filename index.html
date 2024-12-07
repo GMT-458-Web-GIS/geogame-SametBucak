@@ -12,9 +12,8 @@
         <p>Select a mode for starting the game:</p>
         <button id="domestic-button">Turkish Super League Mode</button>
         <button id="foreign-button">Champions League Mode</button>
-        <button id="instructions-button">How to Play</button> <!-- Oyun talimatları butonu -->
+        <button id="instructions-button">How to Play</button>
 
-        <!-- Talimat paneli (başlangıçta gizlenmiş) -->
         <div id="instructions-panel" style="display: none;">
             <h2>How to Play</h2>
             <p>
@@ -27,27 +26,23 @@
     </div>
 
     <script>
-        // Butonlara tıklama olayları
         document.getElementById('domestic-button').addEventListener('click', () => {
-            window.location.href = 'domestic.html';  // Yerli stadyumlar sayfasına yönlendir
+            window.location.href = 'domestic.html';
         });
 
         document.getElementById('foreign-button').addEventListener('click', () => {
-            window.location.href = 'foreign.html';  // Yabancı stadyumlar sayfasına yönlendir
+            window.location.href = 'foreign.html';
         });
 
-        // Talimatları gösterme butonu
         document.getElementById('instructions-button').addEventListener('click', () => {
-            document.getElementById('instructions-panel').style.display = 'block';  // Paneli göster
+            document.getElementById('instructions-panel').style.display = 'block';  
         });
 
-        // Talimatlar panelini kapatma butonu
         document.getElementById('close-instructions').addEventListener('click', () => {
-            document.getElementById('instructions-panel').style.display = 'none';  // Paneli gizle
+            document.getElementById('instructions-panel').style.display = 'none'; 
         });
     </script>
 
-    <!-- Lisans Bilgisi -->
     <div id="license">
         <p>&copy; 2024 Samet Bucak. All rights reserved.</p>
     </div>
