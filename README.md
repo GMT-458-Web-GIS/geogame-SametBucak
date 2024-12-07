@@ -21,7 +21,8 @@
 - Champions League Mode: Famous stadiums in Europe.
 
 
-- ![image](https://github.com/user-attachments/assets/09ef9e83-2c43-4491-ac90-5e762e01d7e3)
+- ![image](https://github.com/user-attachments/assets/68157830-7a60-49d7-8b15-f85b3b382405)
+
 
 
 - **Dynamic Map Interaction**: Players try to mark the correct location according to the stadium name.
