@@ -1,63 +1,135 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/ATV5e7Id)
-# Interactive Geography Map Quiz
+# Where Is The Stadium
 
-This is an interactive geography quiz game where players click on countries based on the questions. The game checks if the user clicks near the correct country on a map and provides feedback.
+**Where Is The Stadium**; stadyum isimlerini, görsellerini ve harita üzerinde doğru lokasyonu bulmayı amaçlayan eğlenceli bir coğrafi oyundur. Oyuncular, iki farklı modda oynayabilir:
 
-## Project Overview
-- **Technologies Used**: HTML, CSS, JavaScript, and Leaflet.js (JavaScript library for interactive maps).
-- **Objective**: Test geographic knowledge by asking players to locate countries on the map.
+- **Turkish Super League Mode**: Türkiye Süper Ligi'ndeki stadyumlar için oynanır.
+- **Champions League Mode**: Şampiyonlar Ligi'nde kullanılan stadyumları kapsar.
 
-## Requirements
+## Özellikler
 
-1. **Frontend Requirements**:
-    - Display an interactive map that covers the entire screen.
-    - Show a question prompt for the player to locate specific countries.
-    - Provide feedback on whether the chosen location is correct or incorrect.
-    - Show the correct location briefly if the answer is wrong.
-    - Include a "Next Question" button to load the next country in the quiz.
-  
-2. **Functional Requirements**:
-    - **Question Handling**: The game iterates through a set of predefined country locations.
-    - **Click Detection**: The map registers clicks, calculates distance from the target, and checks accuracy.
-    - **Feedback**: Alerts the player if they were correct or incorrect.
-    - **Map Library**: Uses Leaflet.js to render and manage the interactive map.
-    - **Panning and Zooming**: The map is set to display the whole world by default with a zoom level that allows easy country selection.
-  
-## Planned Features
-- **Scoring System**: Introduce a scoring system to reward correct answers and track performance.
-- **Expanded Country Pool**: Add more countries to the quiz for a richer experience.
-- **SVG Support**: Incorporate SVGs for country boundaries or custom markers if possible, allowing for enhanced visual clarity.
+- **Başlangıç Ekranı**: Oyuncular, başlangıç ekranında oyun modlarından birini seçer.
+- **Modlar**:
+  - Turkish Super League Mode: Türkiye'deki stadyumlar.
+  - Champions League Mode: Avrupa'nın ünlü stadyumları.
+- **Dinamik Harita Etkileşimi**: Oyuncular, stadyumun ismine göre doğru lokasyonu işaretlemeye çalışır.
+- **Puanlama Sistemi**: Lokasyonun doğru işaretlenme yakınlığına göre:
+  - 0-50 km arası: 3 puan
+  - 51-100 km arası: 2 puan
+  - 101-200 km arası: 1 puan
+  - Daha uzak: 0 puan
+- **Responsive Tasarım**: Her cihaz için uygun görüntüleme.
 
-## Frontend Layout
+## Kullanılan Teknolojiler
 
-The frontend layout is simple and focused on usability:
+- **HTML**: Oyun sayfalarının yapısını oluşturur.
+- **CSS**: Görsel düzenlemeler ve stil için.
+- **JavaScript**: Dinamik etkileşim ve oyun mantığını sağlar.
 
-- **Map Area**: The map occupies the majority of the screen to facilitate easy selection.
-- **Question Section**: Positioned below the map, displaying the current country to locate.
-- **Next Button**: Located below the question, allowing users to move to the next question at their own pace.
+## Gereksinimler
 
-### Layout Diagram:
-Below is a rough layout for the interface:
-![image](https://github.com/user-attachments/assets/052cd8ae-75c9-4fc3-9e28-48e7a4cd0ea6)
+- Modern bir tarayıcı (Google Chrome, Firefox, Edge gibi).
+- Oyunun dosyalarını yerel bir sunucuda barındırmak için bir tarayıcı veya dosya gezgini yeterlidir.
 
+## Dosya Yapısı
 
-## JavaScript Library
-This project uses **Leaflet.js** for map rendering and interactive functionality.
+- **index.html**: Başlangıç ekranı.
+- **domestic.html**: Turkish Super League Mode ekranı.
+- **foreign.html**: Champions League Mode ekranı.
+- **domestic.js**: Turkish Super League Mode ile ilgili JavaScript fonksiyonları.
+- **foreign.js**: Champions League Mode ile ilgili JavaScript fonksiyonları.
+- **style.css**: Tüm oyun sayfaları için stil dosyası.
 
-## Setup and Usage
-1. Clone this repository.
-2. Open `index.html` in your browser to start the game.
-3. Follow the prompts to select the correct locations on the map.
+## Kurulum
 
-## Future Plans
-- Add a scoring system to reward correct answers and track player progress.
-- Expand the question pool with additional countries.
-- Explore the integration of SVG support for more detailed map interactions.
+1. Projeyi bir klasöre indirin.
+2. Bir tarayıcıda **index.html** dosyasını açarak oyunu başlatın.
 
+## Nasıl Oynanır?
 
+1. **Başlangıç ekranında** bir oyun modu seçin (Turkish Super League veya Champions League).
+2. Mod ekranında, rastgele bir stadyum ismi ve görseli görünür.
+3. Harita üzerinde stadyumun lokasyonunu işaretleyin.
+4. Doğru lokasyona yakınlığınıza göre puan kazanın (3, 2, 1 veya 0 puan).
+5. Yeni stadyumlar için ilerleyin ve puanınızı artırmaya çalışın.
 
+**Başlangıç Ekranı Akışı:**
+- **index.html**, oyuncunun Turkish Super League Mode veya Champions League Mode arasında seçim yapmasını sağlar.
+- Seçim yapıldığında, `onclick` eventiyle `domestic.html` veya `foreign.html` sayfasına yönlendirilir.
 
+## Teknik Ayrıntılar
 
+### 3 Event Handlers
 
+1. **Mod Seçimi** (index.html):
+```javascript
+// Başlangıç ekranında, mod seçim butonuna tıklanıldığında tetiklenir.
+const selectMode = document.getElementById('modeButton');
+selectMode.addEventListener('click', () => {
+  window.location.href = 'domestic.html'; // veya 'foreign.html'
+});
+```
 
+2. **Harita Tıklama** (domestic.js):
+```javascript
+// Oyuncunun harita üzerindeki bir noktayı tıklamasıyla tetiklenir.
+map.on('click', (event) => {
+  const clickedCoords = event.latlng;
+  checkDistance(clickedCoords, targetCoords); // Mesafeyi kontrol et ve puanı hesapla
+});
+```
 
+3. **Sonuç Gösterimi** (foreign.js):
+```javascript
+// Sonuçları gösteren bir butona basıldığında tetiklenir.
+document.getElementById('showResults').addEventListener('click', () => {
+  displayResults(); // Puanı ve doğru lokasyonu gösterir
+});
+```
+
+### Closures Kullanımı
+Projede closures, aşağıdaki şekilde fayda sağladı:
+
+1. **Puan Takibi:**
+```javascript
+function createScoreTracker() {
+  let score = 0;
+  return {
+    addPoints: (points) => { score += points; },
+    getScore: () => score
+  };
+}
+
+const scoreTracker = createScoreTracker();
+scoreTracker.addPoints(3);
+console.log(scoreTracker.getScore()); // 3
+```
+
+2. **Harita Tıklama Yönetimi:**
+```javascript
+function createClickHandler(targetCoords) {
+  return function(clickedCoords) {
+    const distance = calculateDistance(clickedCoords, targetCoords);
+    console.log(`Distance: ${distance} km`);
+  };
+}
+
+const handleClick = createClickHandler([40.748817, -73.985428]); // Örnek koordinat
+handleClick([40.73061, -73.935242]);
+```
+
+### DOM ile Etkileşim
+
+- **Element Güncelleme**: Mod seçim ekranında, seçilen modun adını ve görselini DOM üzerinden dinamik olarak güncelledik.
+```javascript
+document.getElementById('gameTitle').innerText = 'Turkish Super League Mode';
+```
+
+- **Sonuç Gösterimi**: Oyun sonunda, DOM manipülasyonu ile sonuç bilgileri (puan, doğru lokasyon) görselleştirildi.
+```javascript
+document.getElementById('scoreDisplay').innerText = `Your Score: ${score}`;
+```
+
+- **Harita Üzerindeki İşaretleyiciler**: Harita üzerinde tıklanan noktaları göstermek için DOM üzerinden SVG elementleri eklendi ve güncellendi.
+```javascript
+const marker = L.marker([lat, lng]).addTo(map);
+```
