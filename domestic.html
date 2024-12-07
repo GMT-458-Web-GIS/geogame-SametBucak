@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Where Is The Stadium - Turkish Super League Mode</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="domestic">
+    <div id="game-container">
+        <div id="info-panel">
+            <h1 style="color: white;">TURKISH SUPER LEAGUE MODE</h1>
+            <img id="stadium-photo" alt="Stadyum Fotoğrafı">
+            <p id="stadium-name" style="color:white">CLICK THE BUTTON TO GET STARTED</p>
+            <div id="stats">
+                <p>Score: <span id="score">0</span></p>
+                <p>Time: <span id="timer">200</span> seconds</p>
+            </div>
+            <button id="start-button">Start</button>
+            <div style="display: flex; gap: 10px; margin-top: 10px;">
+                <button id="hint-button" style="display:none;">Hint</button>
+                <button id="mainMenuBtn" style="display:block;">Main Menu</button>
+            </div>
+
+        <script>
+            // Main Menu butonuna tıklama olayını dinleyin
+            document.getElementById("mainMenuBtn").addEventListener("click", function() {
+                window.location.href = "index.html"; // Ana ekrana yönlendir
+            });
+        </script>
+        </div>
+        <div id="map"></div>
+    </div>
+    <div id="score-modal" class="modal">
+        <div class="modal-content">
+            <h2>Game Over!</h2>
+            <p>Total Score: <span id="final-score"></span></p>
+            <button id="close-modal">OK</button>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/ol/dist/ol.js"></script>
+    <script src="domestic.js"></script>
+</body>
+</html>

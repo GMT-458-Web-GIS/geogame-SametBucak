@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Where Is The Stadium</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="start-page">
+        <h1>Where is The Stadium ?</h1>
+        <p>Select a mode for starting the game:</p>
+        <button id="domestic-button">Turkish Super League Mode</button>
+        <button id="foreign-button">Champions League Mode</button>
+        <button id="instructions-button">How to Play</button> <!-- Oyun talimatları butonu -->
+
+        <!-- Talimat paneli (başlangıçta gizlenmiş) -->
+        <div id="instructions-panel" style="display: none;">
+            <h2>How to Play</h2>
+            <p>
+                In this game, depending on the mode you choose, you will see an image and name of a stadium.
+                Your task is to guess where it is located on the map. You can also use the hint button if you need help.
+                Depending on the proximity to the real location, you can earn 1, 2 or 3 points. Try to collect the most points in the given time. Have fun!
+            </p>
+            <button id="close-instructions">Close</button>
+        </div>
+    </div>
+
+    <script>
+        // Butonlara tıklama olayları
+        document.getElementById('domestic-button').addEventListener('click', () => {
+            window.location.href = 'domestic.html';  // Yerli stadyumlar sayfasına yönlendir
+        });
+
+        document.getElementById('foreign-button').addEventListener('click', () => {
+            window.location.href = 'foreign.html';  // Yabancı stadyumlar sayfasına yönlendir
+        });
+
+        // Talimatları gösterme butonu
+        document.getElementById('instructions-button').addEventListener('click', () => {
+            document.getElementById('instructions-panel').style.display = 'block';  // Paneli göster
+        });
+
+        // Talimatlar panelini kapatma butonu
+        document.getElementById('close-instructions').addEventListener('click', () => {
+            document.getElementById('instructions-panel').style.display = 'none';  // Paneli gizle
+        });
+    </script>
+
+    <!-- Lisans Bilgisi -->
+    <div id="license">
+        <p>&copy; 2024 Samet Bucak. All rights reserved.</p>
+    </div>
+</body>
+</html>
