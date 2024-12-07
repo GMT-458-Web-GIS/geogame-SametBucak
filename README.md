@@ -156,3 +156,4 @@ const marker = L.marker([lat, lng]).addTo(map);
 
 ### ChatGPT Links:
 https://chatgpt.com/share/6754aa4b-2484-800a-9d4a-b7e672d0d8be
+https://chatgpt.com/share/6754af7e-b700-800a-b199-3f07b77bc52d
