@@ -1,4 +1,3 @@
-/* Genel Ayarlar */
 body {
   margin: 0;
   font-family: 'Arial', sans-serif;
@@ -17,7 +16,6 @@ body {
   width: 100%;
 }
 
-/* Bilgi Paneli */
 #info-panel {
   width: 30%;
   background-color: #ffffff;
@@ -47,7 +45,6 @@ body {
   font-weight: bold;
 }
 
-/* Harita Alanı */
 #map {
   flex: 1;
   height: 100%;
@@ -55,7 +52,6 @@ body {
   background-color: #f7f7f7;
 }
 
-/* Butonlar */
 #start-button {
   padding: 15px 25px;
   background-color: #007bff;
@@ -72,7 +68,6 @@ body {
   background-color: #0056b3;
 }
 
-/* Modal */
 .modal {
   display: none;
   position: fixed;
@@ -110,86 +105,77 @@ body {
   font-weight: bold;
 }
 
-/* Türkiye Teması */
 body.domestic {
-  background: linear-gradient(to bottom, #e30a17, #ffffff); /* Türk bayrağı renkleri */
+  background: linear-gradient(to bottom, #e30a17, #ffffff); 
   background-size: cover;
   font-family: 'Arial', sans-serif;
   color: #fff;
   overflow: hidden;
   position: relative;
-  animation: fadeIn 1s ease-out; /* Yumuşak görünüm geçişi */
+  animation: fadeIn 1s ease-out; 
 }
 
-/* Panelin kırmızı kenarları ve metin rengi */
 body.domestic #info-panel {
   border: 3px solid #e30a17;
   color: #e30a17;
-  background-color: rgba(255, 255, 255, 0.8); /* Hafif şeffaf beyaz */
+  background-color: rgba(255, 255, 255, 0.8); 
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Hafif gölge */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); 
 }
 
-/* Başlık rengi ve stil */
 body.domestic #info-panel {
-  background-color: rgba(255, 0, 0, 0.2); /* Şeffaf kırmızı, Türk futboluna atıf */
-  background-image: url('images/turk_mod.jpg'); /* UCL fotoğrafı */
-  background-size: cover; /* Fotoğrafın boyutunu panoya göre uydurur */
-  background-position: center; /* Fotoğrafı panelin ortasında hizalar */
-  background-blend-mode: overlay; /* Arka planla karışımı ayarlayarak görünürlüğü düzenler */
-  border-radius: 10px; /* Panelin köşelerini yuvarlatır */
-  padding: 20px; /* İçerik için boşluk bırakır */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6); /* Hafif gölge ile derinlik ekler */
-  color: white; /* Metin rengini beyaz yaparak okunabilirliği artırır */
-  font-family: 'Arial', sans-serif; /* Temiz ve modern bir yazı tipi */
+  background-color: rgba(255, 0, 0, 0.2); 
+  background-image: url('images/turk_mod.jpg'); 
+  background-size: cover; 
+  background-position: center; 
+  background-blend-mode: overlay; 
+  border-radius: 10px; 
+  padding: 20px; 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6); 
+  color: white; 
+  font-family: 'Arial', sans-serif; 
 }
 
 
-/* Stad fotoğrafı */
 body.domestic #stadium-photo {
-  border: 4px solid #e30a17; /* Kırmızı çerçeve */
+  border: 4px solid #e30a17; 
   box-shadow: 0 8px 16px rgba(227, 10, 23, 0.7);
   border-radius: 15px;
-  transition: transform 0.3s ease; /* Hoverda büyüme efekti */
+  transition: transform 0.3s ease; 
 }
 
-/* Hover efekti ile büyüme */
 body.domestic #stadium-photo:hover {
   transform: scale(1.05);
 }
 
-/* Başlat butonu */
 body.domestic #start-button {
   background-color: #e30a17;
   color: #fff;
   font-size: 18px;
   padding: 15px 30px;
   border-radius: 30px;
-  border: 2px solid #b30c13; /* Hafif koyu kırmızı sınır */
+  border: 2px solid #b30c13; 
   cursor: pointer;
   box-shadow: 0 4px 8px rgba(227, 10, 23, 0.3);
   transition: all 0.3s ease;
 }
 
-/* Hover ve odaklanma efekti */
 body.domestic #start-button:hover {
   background-color: #b30c13;
   box-shadow: 0 4px 16px rgba(227, 10, 23, 0.6);
-  transform: scale(1.05); /* Butonun büyüme efekti */
+  transform: scale(1.05); 
 }
 
-/* Modal penceresi */
 body.domestic .modal-content {
-  background-color: rgba(227, 10, 23, 0.9); /* Kırmızı tonlarında şeffaf arka plan */
+  background-color: rgba(227, 10, 23, 0.9); 
   color: #fff;
   border-radius: 10px;
   padding: 20px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6); /* Modal için derin gölge */
-  animation: fadeInModal 1s ease-out; /* Modal penceresi animasyonu */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6); 
+  animation: fadeInModal 1s ease-out; 
 }
 
-/* Modal içindeki buton */
 body.domestic .modal-content button {
   background-color: #fff;
   color: #e30a17;
@@ -201,14 +187,12 @@ body.domestic .modal-content button {
   transition: all 0.3s ease;
 }
 
-/* Modal buton hover efekti */
 body.domestic .modal-content button:hover {
   background-color: #e30a17;
   color: #fff;
-  transform: scale(1.1); /* Buton büyüme efekti */
+  transform: scale(1.1); 
 }
 
-/* Animasyonlar */
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -241,9 +225,8 @@ body.domestic .modal-content button:hover {
   }
 }
 
-/* UEFA Teması */
 body.foreign {
-  background: linear-gradient(to bottom, #001d4a, #003366, #00072d); /* Daha derin mavi tonları */
+  background: linear-gradient(to bottom, #001d4a, #003366, #00072d); 
   
   background-size: cover;
   background-blend-mode: overlay;
@@ -251,53 +234,47 @@ body.foreign {
   color: #fff;
   overflow: hidden;
   position: relative;
-  animation: fadeIn 1s ease-out; /* Yumuşak görünüm geçişi */
+  animation: fadeIn 1s ease-out;
 }
 
-/* Panelin şeffaf mavi arka planı */
 body.foreign #info-panel {
-  background-color: rgba(0, 0, 255, 0.181); /* Şeffaf mavi */
-  background-image: url('images/ucl_mode.png'); /* UCL fotoğrafı */
-  background-size: cover; /* Fotoğrafın boyutunu panoya göre uydurur */
-  background-position: center; /* Fotoğrafı panelin ortasında hizalar */
-  background-blend-mode: overlay; /* Arka planla karışımı ayarlayarak görünürlüğü düzenler */
+  background-color: rgba(0, 0, 255, 0.181); 
+  background-image: url('images/ucl_mode.png'); 
+  background-size: cover; 
+  background-position: center; 
+  background-blend-mode: overlay;
   border-radius: 10px;
   padding: 20px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6); /* Hafif gölge */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6); 
 }
 
-/* Başlık rengi ve stil */
 body.foreign #info-panel h1 {
-  color: white; /* Altın rengi */
-  text-shadow: 2px 2px 5px purple; /* Altın gölge efekti */
+  color: white; 
+  text-shadow: 2px 2px 5px purple; 
   font-size: 36px;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 2px;
-  animation: bounceIn 1.5s ease-out; /* Başlık için animasyon */
+  animation: bounceIn 1.5s ease-out; 
 }
 
-/* Stad fotoğrafı */
 body.foreign #stadium-photo {
-  border: 3px solid #ffd700; /* Altın çerçeve */
+  border: 3px solid #ffd700; 
   box-shadow: 0 8px 16px rgba(255, 215, 0, 0.7);
   border-radius: 15px;
-  transition: transform 0.3s ease; /* Hoverda büyüme efekti */
+  transition: transform 0.3s ease; 
 }
 
-/* Hover efekti ile büyüme */
 body.foreign #stadium-photo:hover {
   transform: scale(1.05);
 }
 
-/* Harita arka planı */
 body.foreign #map {
   background-color: #00264d;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Hafif gölge */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
 }
 
-/* Başlat butonu */
 body.foreign #start-button {
   background-color: darkblue;
   color: whitesmoke;
@@ -310,24 +287,21 @@ body.foreign #start-button {
   transition: all 0.3s ease;
 }
 
-/* Hover ve odaklanma efekti */
 body.foreign #start-button:hover {
   background-color: #001d4a;
   box-shadow: 0 4px 16px rgba(255, 215, 0, 0.6);
-  transform: scale(1.05); /* Butonun büyüme efekti */
+  transform: scale(1.05); 
 }
 
-/* Modal penceresi */
 body.foreign .modal-content {
   background-color: rgba(0, 0, 51, 0.9);
   color: #ffd700;
   border-radius: 10px;
   padding: 20px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7); /* Modal için derin gölge */
-  animation: fadeInModal 1s ease-out; /* Modal penceresi animasyonu */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7); 
+  animation: fadeInModal 1s ease-out; 
 }
 
-/* Modal içindeki buton */
 body.foreign .modal-content button {
   background-color: #ffd700;
   color: #003366;
@@ -339,14 +313,12 @@ body.foreign .modal-content button {
   transition: all 0.3s ease;
 }
 
-/* Modal buton hover efekti */
 body.foreign .modal-content button:hover {
   background-color: #003366;
   color: #ffd700;
-  transform: scale(1.1); /* Buton büyüme efekti */
+  transform: scale(1.1); 
 }
 
-/* Animasyonlar */
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -379,7 +351,6 @@ body.foreign .modal-content button:hover {
   }
 }
 
-/* Genel Ayarlar */
 body {
   margin: 0;
   font-family: 'Arial', sans-serif;
@@ -389,15 +360,15 @@ body {
   align-items: center;
   min-height: 100vh;
   text-align: center;
-  background-image: url('images/background.jpg'); /* Arka plan resminin yolunu buraya ekleyin */
+  background-image: url('images/background.jpg'); 
   background-size: cover;
   background-position: center;
-  background-attachment: fixed; /* Arka planın sabit durmasını sağlar */
+  background-attachment: fixed; 
 }
 
 /* Başlangıç Sayfası */
 #start-page {
-  background: rgba(0, 0, 0, 0.7); /* Şeffaf siyah arka plan */
+  background: rgba(0, 0, 0, 0.7); 
   padding: 40px;
   border-radius: 15px;
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
@@ -410,7 +381,7 @@ body {
   margin-bottom: 20px;
   text-transform: uppercase;
   font-weight: bold;
-  color: #f5c518; /* Altın rengi */
+  color: #f5c518; 
 }
 
 #start-page p {
@@ -444,13 +415,12 @@ body {
 }
 
 #start-page button::before {
-  content: '⚽'; /* Futbol topu simgesi */
+  content: '⚽';
   margin-right: 10px;
   font-size: 20px;
   vertical-align: middle;
 }
 
-/* Oyun Ekranı */
 #game-container {
   display: flex;
   height: 100vh;
@@ -520,7 +490,6 @@ body {
   background: #e9ecef;
 }
 
-/* Modal Tasarımı */
 .modal {
   display: none;
   position: fixed;
@@ -571,7 +540,6 @@ body {
   background-color: #1e7e34;
 }
 
-/* Responsive Tasarım */
 @media (max-width: 768px) {
   #game-container {
     flex-direction: column;
@@ -620,12 +588,11 @@ body {
 #hint-button {
   padding: 10px 20px;
   font-size: 16px;
-  background-color: #4CAF50; /* Yeşil arka plan */
-  color: white;
+  background-color: #4CAF50; 
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin-top: 20px; /* Üstten 20px boşluk ekleyin */
+  margin-top: 20px; 
 }
 
 #hint-button:hover {
@@ -635,24 +602,23 @@ body {
 #mainMenuBtn {
   padding: 10px 20px;
   font-size: 16px;
-  background-color: blue; /* Yeşil arka plan */
+  background-color: blue; 
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin-top: 20px; /* Üstten 20px boşluk ekleyin */
+  margin-top: 20px; 
 }
 
 #mainMenuBtn:hover {
-  background-color: black; /* Hover efekti */
+  background-color: black; 
 }
 
 #stadium-name {
-  margin-bottom: 1px; /* Alt boşluğu azaltın */
+  margin-bottom: 1px; 
 }
 
 #stats {
-  margin-top: 1px; /* Üst boşluğu azaltın */
-
+  margin-top: 1px; 
 
 }
