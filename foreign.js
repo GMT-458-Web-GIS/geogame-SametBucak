@@ -113,13 +113,11 @@ function startGame() {
   scoreElement.textContent = score;
   timerElement.textContent = timer;
 
-  // "Oyunu Başlat" butonunu gizle
   startButton.style.display = 'none';
 
   document.getElementById("stadium-photo").style.display = "block";
   showStadium();
 
-  // Show hint button after starting the game
   hintButton.style.display = 'block';
 
   interval = setInterval(() => {
@@ -155,22 +153,21 @@ function checkAnswer(coords) {
 
   let points = 0;
 
-  // Mesafeye göre puan verme
   if (distance < 0.1) {
-    points = 3;  // Çok yakınsa, 3 puan
+    points = 3; 
   } else if (distance < 0.3) {
-    points = 2;  // Orta mesafe ise, 2 puan
+    points = 2;  
   } else if (distance < 0.5) {
-    points = 1;  // Uzak mesafe ise, 1 puan
+    points = 1;  
   } else {
-    points = 0;  // Çok uzaksa, 0 puan
+    points = 0;  
   }
 
-  score += points;  // Puanı artır
+  score += points;  
   scoreElement.textContent = score;
 
-  currentStadiumIndex++;  // Bir sonraki stadyuma geç
-  showStadium();  // Yeni stadyumu göster
+  currentStadiumIndex++;  
+  showStadium();  
 }
 
 function endGame() {
@@ -178,12 +175,11 @@ function endGame() {
   finalScoreElement.textContent = score;
   modal.style.display = "flex";
 
-  // Oyun bittiğinde butonu tekrar göster
   startButton.style.display = 'block';
-  hintButton.style.display = 'none';  // Hide the hint button when game ends
+  hintButton.style.display = 'none';  
 }
 
 closeModalButton.addEventListener("click", () => {
   modal.style.display = "none";
-  startButton.style.display = 'block';  // Butonu tekrar görünür yap
+  startButton.style.display = 'block';  
 });
