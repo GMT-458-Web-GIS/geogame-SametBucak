@@ -153,3 +153,6 @@ document.getElementById('scoreDisplay').innerText = `Your Score: ${score}`;
 ```javascript
 const marker = L.marker([lat, lng]).addTo(map);
 ```
+
+### ChatGPT Links:
+https://chatgpt.com/share/6754aa4b-2484-800a-9d4a-b7e672d0d8be
