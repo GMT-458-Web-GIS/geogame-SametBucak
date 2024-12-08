@@ -19,7 +19,7 @@ const stadiums = [
 
 let currentStadiumIndex = 0;
 let score = 0;
-let timer = 480;
+let timer = 200;
 let interval;
 let pointerLayer = null;
 
